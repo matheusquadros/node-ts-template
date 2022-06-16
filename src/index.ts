@@ -1,4 +1,6 @@
-import 'module-alias/register'
-import app from '@/main/server'
+import config from '@/config'
+import app from '@/server'
 
-app.listen(5050, () => console.log('Server is listening on port 5050'))
+app.listen(config.port, () =>
+  console.log(`Server is listening on port ${config.port}`)
+)

@@ -1,4 +1,4 @@
-import { Test } from '@/main/test'
+import { Test } from '@/service/test'
 
 test('adds 1 + 2 to equal 3', () => {
   const sut = new Test()

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node -r module-alias/register dist/index.js",
     "build": "rimraf dist && tsc -p tsconfig-build.json",
-    "dev": "ts-node-dev ./src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
     "test": "cross-env LOG_DISABLED=true NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests --runInBand --no-cache",
     "test:unit": "npm test -- --watchAll tests/unit",
     "test:e2e": "npm test -- --watchAll tests/e2e",
@@ -36,6 +36,7 @@
     "supertest": "^6.2.2",
     "ts-jest": "^27.1.5",
     "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^4.0.0",
     "typescript": "^4.6.3"
   },
   "dependencies": {
