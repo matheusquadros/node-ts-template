@@ -13,7 +13,14 @@ const defaultConfig = {
   },
   maxWorkers: '50%',
   watchPathIgnorePatterns: ['node_modules'],
-  transformIgnorePatterns: ['node_modules']
+  transformIgnorePatterns: ['node_modules'],
+  preset: 'ts-jest',
+  transform: {
+    '^.+\\.ts?$': 'ts-jest'
+  },
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1'
+  }
 }
 
 export default {
