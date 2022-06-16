@@ -6,8 +6,8 @@
   "scripts": {
     "start": "ts-node-dev ./src/index.ts",
     "test": "jest --passWithNoTests --runInBand --no-cache",
-    "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
-    "test:integration": "npm test -- --watchAll -c jest-integration-config.js",
+    "test:unit": "npm test -- --watchAll tests/unit",
+    "test:e2e": "npm test -- --watchAll tests/e2e",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   },
